@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/home.js":
+/*!*********************!*\
+  !*** ./src/home.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"displayHomePageContent\": () => (/* binding */ displayHomePageContent)\n/* harmony export */ });\nfunction createHomeContent() {\n  const container = document.createElement(\"div\");\n  container.className = \"home-info-container\";\n  const aboveText = document.createElement(\"p\");\n  aboveText.textContent = \"Best pizza in the Kitchener Metropolitan Area!\";\n  container.appendChild(aboveText);\n  const image = document.createElement(\"img\");\n  image.src = \"../img/tito.jpg\";\n  image.style.maxWidth = \"150px\";\n  image.style.width = \"auto\";\n  image.style.height = \"auto\";\n  image.style.borderRadius = \"70%\";\n  container.appendChild(image);\n  const belowText = document.createElement(\"p\");\n  belowText.textContent = \"Order online or in person\";\n  container.appendChild(belowText);\n  return container;\n}\n\nfunction displayHomePageContent() {\n  const contentSection = document.querySelector(\".content\");\n  contentSection.classList.add(\"content-home\");\n  contentSection.appendChild(createHomeContent());\n}\n\n\n//# sourceURL=webpack://restaurant-page/./src/home.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _page_load__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page-load */ \"./src/page-load.js\");\n\n\n(0,_page_load__WEBPACK_IMPORTED_MODULE_0__.pageLoad)();\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _page_load__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page-load */ \"./src/page-load.js\");\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n\n\n\n(0,_page_load__WEBPACK_IMPORTED_MODULE_0__.pageLoad)();\n(0,_home__WEBPACK_IMPORTED_MODULE_1__.displayHomePageContent)();\nconst buttons = document.querySelectorAll(\"button\");\n\n[...buttons].forEach((button) => {\n  button.addEventListener(\"click\", (e) => {\n    // Delete child node, then create/display new node\n    deleteChild();\n    switch (e.target.parentElement.className) {\n      case \"home\":\n        console.log(\"Clicked home button\");\n        (0,_home__WEBPACK_IMPORTED_MODULE_1__.displayHomePageContent)();\n        break;\n      case \"menu\":\n        console.log(\"Clicked menu button\");\n        break;\n      case \"contact\":\n        console.log(\"Clicked contact button\");\n        break;\n    }\n  });\n});\n\nfunction deleteChild() {\n  const contentSection = document.querySelector(\".content\");\n  if (contentSection.firstChild != null) {\n    contentSection.removeChild(contentSection.firstChild);\n  }\n}\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
 
 /***/ }),
 
