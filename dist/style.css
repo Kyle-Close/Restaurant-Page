@@ -128,14 +128,21 @@ button:hover i::after {
   }
 }
 
+.content {
+  display: grid;
+  grid-template-columns: 700px;
+}
+
 .content-home {
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .content-menu {
-  display: flex;
+  justify-content: center;
+}
+
+.content-contact {
   justify-content: center;
 }
 
@@ -150,12 +157,79 @@ button:hover i::after {
   font-size: 30px;
 }
 
+.menu-grid-container {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.contact-container {
+  align-self: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px 40px 30px;
+  gap: 10px;
+}
+
+.contact-container > img {
+  align-self: center;
+}
+
+.phone-section,
+.address-section {
+  display: flex;
+  gap: 10px;
+  font-size: 26px;
+}
+
+.square {
+  background: rgba(0, 0, 0, 0.8);
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.square:hover {
+  opacity: 0.7;
+}
+
+.square img {
+  width: 50px;
+  height: auto;
+}
+
+.square > h1,
+p {
+  margin: 0;
+}
+
+.square > h1 {
+  font-size: 20px;
+}
+
+.square > p {
+  font-size: 16px;
+  text-align: center;
+  padding: 0 10px;
+}
+
 .footer {
   min-width: 100%;
   background: rgba(0, 0, 0, 0.8);
   justify-self: flex-end;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .footer p {
